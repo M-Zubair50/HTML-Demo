@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after Pseudo Selector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lemonada', cursive;
+            color: white;
+            background-color: rgb(0, 0, 0);
+        }
+        header::before{
+            background: url("https://source.unsplash.com/collection/190727/1600x900");
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        
+        .navigation {
+            margin-top: 27px;
+            display: flex;
+        }
+
+        .items {
+            list-style: none;
+            padding: 0px 20px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+            padding: 0px 153px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            color: rgb(196, 195, 195);
+            text-decoration: underline;
+        }
+        h3{
+            border: 2px solid white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        h3:hover{
+            border: 2px solid rgb(196, 195, 195);
+            color: rgb(196, 195, 195);
+        }
+
+        
+        /* lets checkout pseudo before and after  */
+        /* section::before{
+            content: "this is para";
+        } */
+        /* nav::after{
+            content: "just for test";
+        }*/
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="items"> <a href="">Home</a> </li>
+                <li class="items"> <a href="">About</a> </li>
+                <li class="items"> <a href="">Services</a> </li>
+                <li class="items"> <a href="">Contact us</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Welcome to the Code World</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam ipsa magni reprehenderit nam mollitia.
+            Ipsum, iste rerum ut quis dicta beatae, accusantium, laboriosam possimus consequatur sint itaque
+            reprehenderit ullam? Debitis voluptas accusamus quaerat explicabo ea eaque aliquid voluptatibus, quia, nemo,
+            odio expedita ut ducimus.</p>
+            <h3>Apply Now</h3>
+        </section>
+    </body>
+
+</html>
